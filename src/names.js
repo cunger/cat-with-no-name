@@ -9,14 +9,13 @@ const names = [
   "Laika",
   "LeChuck",
   "Loreen",
-  "Moby Dick",
   "Napoleon",
-  "Obiwan",
-  "Poulsen",
+  "Gulácsi",
   "Schmusebacke",
   "Schnuffel",
   "Speedy Gonzalez",
-  "Winnetou"
+  "Winnetou",
+  "was ganz anderem"
 ];
 
 export { names };

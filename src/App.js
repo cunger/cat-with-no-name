@@ -7,14 +7,20 @@ import pic2 from './images/katze2.png';
 import pic3 from './images/katze3.png';
 import pic4 from './images/katze4.png';
 import pic5 from './images/katze5.png';
+import pic6 from './images/katze6.png';
+import pic7 from './images/katze7.png';
+import pic8 from './images/katze8.png';
+import pic9 from './images/katze9.png';
 
-const emojis = [ "🐈", "🐱", "😸", "😼", "😽" ];
-const pictures = [ pic1, pic2, pic3, pic4, pic5 ];
+const emojis = [ "🐈", "🐱", "😸", "😼", "😽", "😻" ];
+const pictures = [ pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9 ];
 const buttonTexts = [
   "Gib mir noch einen!",
   "Meeeehr!",
   "Einer geht noch!",
   "Mau?!",
+  "War's das schon?",
+  "Mehr mehr mehr!"
 ]
 
 function App() {
@@ -45,7 +51,7 @@ function App() {
           </button>
         </div>
         <div className="mt-10">
-          <span className="text-gray-500">
+          <span className="text-gray-500 px-3">
             Wie wäre es mit 
             {' '}
             <span className="text-black">
