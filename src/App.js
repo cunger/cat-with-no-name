@@ -27,14 +27,36 @@ function App() {
   const [name, setName] = useState("...");
   const [picture, setPicture] = useState(pic0);
   const [buttonText, setButtonText] = useState("🐈 Gib mir einen Namen!");
+  const [seenPictures, setSeenPictures] = useState([]);
+  const [seenNames, setSeenNames] = useState([]);
 
   const sample = (list) => {
     return list[Math.floor(Math.random() * list.length)];
   };
   
   const generate = () => {
-    setName(sample(names));
-    setPicture(sample(pictures));
+    let randomName;
+    if (seenNames.length === names.length) {
+      randomName = sample(names);
+      setSeenNames([randomName]);
+    } else {
+      const unseenNames = names.filter(n => !seenNames.includes(n));
+      randomName = sample(unseenNames);
+      setSeenNames(seenNames.concat(randomName));
+    }
+
+    let randomPicture;
+    if (seenPictures.length === pictures.length) {
+      randomPicture = sample(pictures);
+      setSeenPictures([randomPicture]);
+    } else {
+      const unseenPictures = pictures.filter(n => !seenPictures.includes(n));
+      randomPicture = sample(unseenPictures);
+      setSeenPictures(seenPictures.concat(randomPicture));
+    }
+
+    setName(randomName);
+    setPicture(randomPicture);
     setButtonText(`${sample(emojis)} ${sample(buttonTexts)}`);
   };
 
